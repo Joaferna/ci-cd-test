@@ -2,7 +2,7 @@ pipeline {
     agent any
     environment{
         ARTIFACTORY_LOGIN=credentials('Artifactory')
-        SERVER_LOGIN=credentials('linux')
+        SERVER_LOGIN=credentials('linux-manuel')
     }
     parameters {
         choice(name: 'BASE_INSTALLATION',
@@ -22,7 +22,7 @@ pipeline {
                description: 'user for ssh connection')
 
         string(name: 'SERVER_FQDN',
-               defaultValue: 'ec2-52-28-52-13.eu-central-1.compute.amazonaws.com',
+               defaultValue: 'ec2-18-193-120-77.eu-central-1.compute.amazonaws.com',
                description: 'Server address for ssh connection')
     }
     
