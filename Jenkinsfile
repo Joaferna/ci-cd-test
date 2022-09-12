@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment{
-        ARTIFACTORY_LOGIN=credentials('Artifactory')
+        ARTIFACTORY_LOGIN=credentials('artifactory')
         SERVER_LOGIN=credentials('linux')
     }
     parameters {
